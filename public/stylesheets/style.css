@@ -1,9 +1,15 @@
-/*body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body
+{
+  font-family: 'Libre Franklin', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.icon
+{
+  width: 25px;
+  height: 25px;
 }
-*/
+
+.navstyle
+{
+  background-color: #ffb900;
+}
