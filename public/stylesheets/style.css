@@ -13,3 +13,20 @@ body
 {
   background-color: #ffb900;
 }
+.imgstyle
+{
+  max-height: 200px;
+  max-width: 200px;
+  margin: 20px 5px;
+}
+
+.cardstyle
+{
+  margin: 10px 10px;
+  max-width: 350px;
+}
+.homestyle
+{
+  background-color:#ffebb3;
+  padding:30px 30px;
+}
