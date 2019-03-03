@@ -1,43 +1,46 @@
-const {mongoose} = require('../db/mongoose');
+const mongoose = require('../db/mongoose');
 const path = require('path');;
-// const productfile = require(path.join('/..', '/models' , '/product'));
-const productfile = require('../models/product');
+const Product = require('../models/product');
 const products = [
   new Product({
-  // imagepath:path.join('/..','/public','/images','/mobile1.jpg'),
-  imagepath:"https://www.91-img.com/pictures/129255-v3-samsung-galaxy-a8-star-mobile-phone-large-1.jpg",
+  imagepath:path.join('/..','/public','/images','/mobile1.jpg'),
   title:"Samsung",
   description:"exemplary phone",
   price:240
 }),
 new Product({
-// imagepath:path.join('/..','/public','/images','/mobile1.jpg'),
-imagepath:"https://www.91-img.com/pictures/129255-v3-samsung-galaxy-a8-star-mobile-phone-large-1.jpg",
+imagepath:path.join('/..','/public','/images','/mobile2.png'),
 title:"Samsung",
 description:"exemplary phone",
 price:240
 }),
 new Product({
-// imagepath:path.join('/..','/public','/images','/mobile1.jpg'),
-imagepath:"https://www.91-img.com/pictures/129255-v3-samsung-galaxy-a8-star-mobile-phone-large-1.jpg",
+imagepath:path.join('/..','/public','/images','/mobile3.jpg'),
 title:"Samsung",
 description:"exemplary phone",
 price:240
 }),
 new Product({
-// imagepath:path.join('/..','/public','/images','/mobile1.jpg'),
-imagepath:"https://www.91-img.com/pictures/129255-v3-samsung-galaxy-a8-star-mobile-phone-large-1.jpg",
+ imagepath:path.join('/..','/public','/images','/mobil4.jpg'),
 title:"Samsung",
 description:"exemplary phone",
 price:240
 })
 ];
 
-for(var i =0;i<products.length;i++)
+var done =0;
+for(var i =0;i< products.length;i++)
 {
-  products[i].save().then((prod)=>{
-    console.log("Added");
-  }).catch((e)=>{
-    console.log("error");
-  });
+
+  products[i].save().then((doc)=>{
+    done++;
+    console.log("Saved product - ", done);
+  },(e)=>{
+    console.log("Not saved");
+  })
+
+  if(done=== products.length)
+  {
+    mongoose.disconnect();
+  }
 }
