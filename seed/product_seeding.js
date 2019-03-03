@@ -25,6 +25,36 @@ new Product({
 title:"Samsung",
 description:"exemplary phone",
 price:240
+}),
+new Product({
+imagepath:"https://images-na.ssl-images-amazon.com/images/I/61MraES1fsL._SY550_.jpg",
+title:"Samsung",
+description:"exemplary phone",
+price:240
+}),
+new Product({
+imagepath:"https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/samsung/samsung-galaxy-j7-star/Samsung-Galaxy-J7-Star-Blue-1-3x.jpg",
+title:"Samsung",
+description:"exemplary phone",
+price:240
+}),
+new Product({
+imagepath:"https://www.91-img.com/pictures/126466-v10-samsung-galaxy-a6-mobile-phone-large-1.jpg",
+title:"Samsung",
+description:"exemplary phone",
+price:240
+}),
+new Product({
+imagepath:"https://static.toiimg.com/photo/60269370/Samsung-Galaxy-J7-Plus.jpg",
+title:"Samsung",
+description:"exemplary phone",
+price:240
+}),
+new Product({
+imagepath:"https://images-na.ssl-images-amazon.com/images/I/81C3NI23ywL._SL1500_.jpg",
+title:"Samsung",
+description:"exemplary phone",
+price:240
 })
 ];
 
