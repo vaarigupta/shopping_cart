@@ -15,17 +15,11 @@ router.get('/', function(req, res, next) {
     }
     res.render('./shop/index', { title: 'Shopping Cart', products: productChunks });
   });
-
-
-  // .then((Prod)=>{
-  //
-  //   console.log("Found");
-  // },(e)=>{
-  //   console.log("Not Found");
-  // });
-
-
 });
+
+router.get('/user',function(req,res,next){
+  res.render('./user/signup.hbs')
+})
 
 module.exports = router;
 
