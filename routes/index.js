@@ -3,7 +3,8 @@ const csurf = require('csurf');
 var router = express.Router();
 var Product = require('../models/product');
 
-var csrfProtection = csrf();
+var csrfProtection = csurf();
+router.use(csrfProtection);
 router.get('/', function(req, res, next) {
   Product.find(function(err, docs){
     if(err)
@@ -21,6 +22,13 @@ router.get('/', function(req, res, next) {
 
 router.get('/user/signup',function(req,res,next){
   res.render('./user/signup',{csrfToken : req.csrfToken()});
+})
+router.post('/user/signup',function(req,res,next){
+  res.redirect('/user/signin');
+})
+
+router.get('/user/signin',function(req,res,next){
+  res.render('./user/signin',{csrfToken : req.csrfToken()});
 })
 
 module.exports = router;
