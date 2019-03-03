@@ -1,7 +1,9 @@
 var express = require('express');
+const csurf = require('csurf');
 var router = express.Router();
 var Product = require('../models/product');
 
+var csrfProtection = csrf();
 router.get('/', function(req, res, next) {
   Product.find(function(err, docs){
     if(err)
@@ -17,8 +19,8 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/user',function(req,res,next){
-  res.render('./user/signup.hbs')
+router.get('/user/signup',function(req,res,next){
+  res.render('./user/signup',{csrfToken : req.csrfToken()});
 })
 
 module.exports = router;
